@@ -1,2 +1,18 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<p><%= link_to "Back", restaurants_path %></p>
+
+<h1><%= @restaurant.name %></h1>
+<p>Type of food: <%= @restaurant.category %></p>
+<p>Address: <%= @restaurant.address %></p>
+<p>Phone number: <%= @restaurant.phone_number %></p>
+
+<h2>Reviews</h2>
+
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li><%= review.content %> with a rating of: <%= review.rating %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Leave a review", new_restaurant_review_path(@restaurant) %></p>
+
+<!-- @restaurant.reviews ? -->

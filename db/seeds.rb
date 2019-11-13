@@ -44,3 +44,5 @@ restaurants_attributes = [
 ]
 Restaurant.create!(restaurants_attributes)
 puts 'Finished!'
+
+# y avait il une maniere automatique de le faire ? parce que faker ...
